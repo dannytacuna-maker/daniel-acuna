@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniel Acuña Torres — CV</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eceae4;
+      color: #1c1a16;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10.2pt;
+      line-height: 1.42;
+    }
+    .page {
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 16mm 17mm 15mm;
+      background: #f7f5f0;
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px 28px;
+      align-items: start;
+      padding-bottom: 16px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #d9d2c4;
+    }
+    h1 {
+      margin: 0;
+      font-size: 24pt;
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      color: #161410;
+    }
+    .headline {
+      margin: 6px 0 0;
+      font-size: 11pt;
+      font-weight: 500;
+      color: #8a7040;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 9pt;
+      color: #4a4741;
+      padding-top: 4px;
+    }
+    .contact a {
+      color: #4a4741;
+      text-decoration: none;
+    }
+    .contact a:hover { color: #161410; }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .icon {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+      stroke: #8a7040;
+      fill: none;
+      stroke-width: 1.6;
+    }
+    h2 {
+      margin: 16px 0 8px;
+      font-size: 8.4pt;
+      font-weight: 650;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8a7040;
+    }
+    .summary { margin: 0; color: #2c2a26; }
+    .job { margin-bottom: 11px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+    }
+    .role { font-weight: 650; color: #161410; }
+    .org { color: #3d3a34; }
+    .dates { font-size: 9pt; color: #6b675f; white-space: nowrap; }
+    .loc { margin: 2px 0 0; font-size: 9pt; color: #6b675f; font-style: italic; }
+    ul { margin: 5px 0 0; padding-left: 16px; }
+    li { margin-bottom: 3px; }
+    .edu { margin-bottom: 7px; }
+    .skills-row { margin: 0 0 4px; color: #2c2a26; }
+    .skills-row strong { color: #161410; font-weight: 650; }
+    .muted { margin: 0; color: #4a4741; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 22px;
+    }
+    .sites a { color: #161410; text-decoration: none; border-bottom: 1px solid #d6b56a; }
+    @media print {
+      body { background: #fff; }
+      .page { background: #fff; }
+    }
+    @media (max-width: 700px) {
+      header { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <h1>Daniel Acuña Torres</h1>
+        <p class="headline">Estudiante de Negocios Internacionales</p>
+      </div>
+      <div class="contact">
+        <a class="row" href="mailto:danny.tacuna@gmail.com">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+          danny.tacuna@gmail.com
+        </a>
+        <a class="row" href="tel:+34695422788">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.8h3.2l1.3 3.2-2 1.2a12.5 12.5 0 006.8 6.8l1.2-2 3.2 1.3v3.2c0 .9-.7 1.7-1.6 1.8C10.2 20 4 13.8 3.7 5.4 3.6 4.5 4.4 3.8 5.3 3.8H6.5z"/></svg>
+          +34 695 422 788
+        </a>
+        <a class="row" href="https://daniel-acuna.vercel.app">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 2.6 4.2 5.8 4.2 9S14.8 18.4 12 21c-2.8-2.6-4.2-5.8-4.2-9S9.2 5.6 12 3z"/></svg>
+          daniel-acuna.vercel.app
+        </a>
+        <span class="row">Villaviciosa de Odón, Madrid</span>
+        <span class="row">Inglés y español — fluido</span>
+      </div>
+    </header>
+
+    <h2>Perfil profesional</h2>
+    <p class="summary">
+      Estudiante de Negocios Internacionales en la Universidad Europea Madrid. Entrego sitios web modernos
+      de extremo a extremo — marca, UX bilingüe (ES/EN), producción y despliegue — para pymes en hospitalidad,
+      alimentación, logística y servicios profesionales en España, Costa Rica y EE. UU.
+      La web es una habilidad que desarrollé, no la profesión.
+    </p>
+
+    <h2>Proyectos digitales y sitios web</h2>
+    <div class="job">
+      <div class="job-head">
+        <div><span class="role">Proyectos web y digitales</span> <span class="org">— Independiente / clientes</span></div>
+        <div class="dates">2025 – Actualidad</div>
+      </div>
+      <div class="loc">Remoto · España / Costa Rica / EE. UU.</div>
+      <ul>
+        <li>Proyectos web de extremo a extremo: discovery, dirección creativa, UI, contenido bilingüe y despliegue.</li>
+        <li>Sitios de marketing para hospitalidad, marcas alimentarias, logística y servicios profesionales.</li>
+        <li>Propuestas, activos de marca e iteración con clientes — de objetivos de negocio a ejecución digital.</li>
+        <li class="sites">
+          En vivo:
+          <a href="https://www.sscoutsourcing.com">sscoutsourcing.com</a> ·
+          <a href="https://www.ontrackcr.net">ontrackcr.net</a> ·
+          <a href="https://firmus-landing.vercel.app">firmus-landing.vercel.app</a>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Liderazgo y experiencia</h2>
+    <div class="job">
+      <div class="job-head">
+        <div><span class="role">Fundador y entrenador — Equipo de BJJ</span> <span class="org">· Universidad Europea Madrid</span></div>
+        <div class="dates">2023 – Actualidad</div>
+      </div>
+      <ul>
+        <li>Equipo universitario desde cero; entrenamientos semanales para 15–25 estudiantes y mentoría en disciplina.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-head">
+        <div><span class="role">Miembro — Comité de Artes Marciales</span> <span class="org">· Universidad Europea Madrid</span></div>
+        <div class="dates">2023 – Actualidad</div>
+      </div>
+      <ul>
+        <li>Apoyo a programas, talleres y eventos estudiantiles con personal universitario y organizaciones.</li>
+      </ul>
+    </div>
+
+    <h2>Formación</h2>
+    <div class="edu">
+      <div class="job-head">
+        <div><span class="role">Universidad Europea Madrid</span> <span class="org">— Grado en Negocios Internacionales</span></div>
+        <div class="dates">2023 – Actualidad</div>
+      </div>
+    </div>
+    <div class="edu">
+      <div class="job-head">
+        <div><span class="role">International School of Panama</span> <span class="org">— High School Diploma</span></div>
+        <div class="dates">2023</div>
+      </div>
+    </div>
+
+    <h2>Competencias</h2>
+    <p class="skills-row"><strong>Digital y web:</strong> Sitios para clientes, estrategia de landing pages, UX bilingüe (ES/EN), presentación de marca, Vercel, Next.js</p>
+    <p class="skills-row"><strong>Negocio y liderazgo:</strong> Comunicación con clientes, propuestas y alcance, organización, resolución de problemas, coaching, oratoria, colaboración intercultural</p>
+
+    <h2>Adicional</h2>
+    <div class="two-col">
+      <p class="muted"><strong style="color:#161410">Internacional:</strong> Reino Unido, Vietnam, EE. UU. (NY), Panamá, Costa Rica y España.</p>
+      <p class="muted"><strong style="color:#161410">BJJ:</strong> Victorias en Río de Janeiro, Madrid, Ciudad de Panamá y San José.</p>
+    </div>
+  </div>
+</body>
+</html>
