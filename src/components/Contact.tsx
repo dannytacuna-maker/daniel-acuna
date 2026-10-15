@@ -20,6 +20,14 @@ export function Contact() {
           <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="site-link block text-zinc-300">
             {contact.phone}
           </a>
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="site-link block text-zinc-300"
+          >
+            {contact.linkedinLabel}
+          </a>
           <p className="text-zinc-400">{contact.location}</p>
         </div>
 

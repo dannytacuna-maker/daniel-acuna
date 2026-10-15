@@ -1,7 +1,7 @@
-export type Locale = "en" | "es";
+﻿export type Locale = "en" | "es";
 
 export type HeroChrome = {
-  theme: "firmus" | "rio" | "ontrack";
+  theme: "ssc" | "countme" | "ontrack" | "ontrack-ops" | "firmus" | "rio";
   nav: string[];
   lang: string;
   eyebrow?: string;
@@ -16,9 +16,10 @@ export type Project = {
   title: Record<Locale, string>;
   category: Record<Locale, string>;
   description: Record<Locale, string>;
-  url: string;
+  url?: string;
   year: string;
   poster: string;
+  mobilePoster: string;
   reel: string;
   videos: string[];
   logo: string;
@@ -56,6 +57,8 @@ export type SiteContent = {
       cvEs: string;
       email: string;
       phone: string;
+      linkedin: string;
+      linkedinLabel: string;
       location: string;
     }
   >;

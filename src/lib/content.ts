@@ -12,6 +12,8 @@ export const cities = [
 
 export const siteUrl = "https://daniel-acuna.vercel.app";
 
+export const linkedInUrl = "https://www.linkedin.com/in/daniel-acu%C3%B1a-514579409/";
+
 export const cvPaths = {
   en: "/cv/Daniel-Acuna-CV-EN.html",
   es: "/cv/Daniel-Acuna-CV-ES.html",
@@ -19,51 +21,79 @@ export const cvPaths = {
 
 export const projects: Project[] = [
   {
-    id: "rio",
-    title: { en: "Rio Trucking", es: "Rio Trucking" },
-    category: { en: "Logistics & transportation", es: "Logística y transporte" },
+    id: "ssc",
+    title: { en: "SSC Outsourcing", es: "SSC Outsourcing" },
+    category: { en: "Accounting & compliance", es: "Contabilidad y cumplimiento" },
     description: {
-      en: "Dual-brand site for a US trucking company — freight, dispatch, and logistics under one roof.",
-      es: "Sitio de doble marca para una empresa de transporte en EE. UU. — carga, dispatch y logística en un solo lugar.",
+      en: "Marketing site for SSC Outsourcing — clear finance ops for companies in Costa Rica and the US.",
+      es: "Sitio de SSC Outsourcing — finanzas claras para operar en Costa Rica y EE. UU.",
     },
-    url: "https://rio-trucking.vercel.app",
+    url: "https://www.sscoutsourcing.com",
     year: "2025",
-    poster: "/projects/rio.png",
-    reel: "/projects/rio-hero.mp4",
+    poster: "/projects/ssc.png?v=crop2",
+    mobilePoster: "/projects/ssc-mobile.png",
+    reel: "/projects/ssc-hero.mp4?v=crop2",
     videos: [],
-    logo: "https://rio-trucking.vercel.app/favicon.ico",
+    logo: "https://www.sscoutsourcing.com/favicon.ico",
     heroChrome: {
-      theme: "rio",
-      nav: ["Services", "Contact"],
-      lang: "EN",
-      headline: "From standard freight to permit-only loads. We move it. On time. Every time.",
-      support: "The entire trucking ecosystem, in one place.",
-      ctaPrimary: "View services",
-      ctaSecondary: "Contact",
+      theme: "ssc",
+      nav: ["Servicios", "Equipo", "Contacto"],
+      lang: "ES EN",
+      headline: "Finanzas claras. Operación libre.",
+      support:
+        "Contabilidad, planillas, impuestos CR/US y auditoría — para que tu equipo se enfoque en el negocio.",
+      ctaPrimary: "Ver servicios",
+      ctaSecondary: "Hablar con SSC",
     },
   },
   {
-    id: "firmus",
-    title: { en: "Firmus Costa Rica", es: "Firmus Costa Rica" },
-    category: { en: "Hospitality consulting", es: "Consultoría hotelera" },
+    id: "countme",
+    title: { en: "Countme", es: "Countme" },
+    category: { en: "Accounting & payroll", es: "Contabilidad y planillas" },
     description: {
-      en: "Premium marketing site for a hotel consulting firm — cinematic hero, live in production.",
-      es: "Sitio premium para una firma de consultoría hotelera — hero cinematográfico, en producción.",
+      en: "Marketing site for Countme — accounting, tax, payroll, and audit outsourcing in Costa Rica.",
+      es: "Sitio de Countme — outsourcing contable, impuestos, planillas y auditoría en Costa Rica.",
     },
-    url: "https://firmus-landing.vercel.app",
-    year: "2025",
-    poster: "/projects/firmus.png",
-    reel: "/projects/firmus-hero.mp4",
-    videos: ["https://firmus-landing.vercel.app/brand/hero-cinematic.mp4"],
-    logo: "https://firmus-landing.vercel.app/brand/logo-firmus-on-dark.png",
+    url: "https://www.countmecr.com",
+    year: "2026",
+    poster: "/projects/countme.png?v=site1",
+    mobilePoster: "/projects/countme-mobile.png?v=site1",
+    reel: "/projects/countme-hero.mp4?v=site1",
+    videos: [],
+    logo: "https://www.countmecr.com/favicon.ico",
     heroChrome: {
-      theme: "firmus",
-      nav: ["Hoteles", "Servicios", "Contacto"],
+      theme: "countme",
+      nav: ["Sobre Countme", "Por qué", "Servicios", "Contacto"],
       lang: "ES EN",
-      headline: "Representación y mercadeo para hoteles sobresalientes en Costa Rica",
-      support: "Hoteles boutique y de experiencias únicas — segmento premium.",
-      ctaPrimary: "Contactar por WhatsApp",
-      ctaSecondary: "Ver servicios",
+      headline: "Outsourcing contable y administrativo",
+      support:
+        "Contabilidad, planillas e impuestos en Costa Rica — desde 2007, con atención personalizada.",
+      ctaPrimary: "Ver servicios",
+      ctaSecondary: "Contactar",
+    },
+  },
+  {
+    id: "ontrack-ops",
+    title: { en: "OnTrack Ops", es: "OnTrack Ops" },
+    category: { en: "Internal operations system", es: "Sistema operativo interno" },
+    description: {
+      en: "Shared monthly ops cockpit for SSC / OnTrack — clients, status, and handoffs in one board.",
+      es: "Tablero compartido del ciclo mensual SSC / OnTrack — clientes, estado y handoffs en un solo lugar.",
+    },
+    year: "2026",
+    poster: "/projects/ontrack-ops.png",
+    mobilePoster: "/projects/ontrack-ops-mobile.png",
+    reel: "/projects/ontrack-ops-hero.mp4",
+    videos: [],
+    logo: "https://ontrack-ops.vercel.app/favicon.ico",
+    heroChrome: {
+      theme: "ontrack-ops",
+      nav: ["Ciclo", "Guías", "Supervisión"],
+      lang: "ES",
+      headline: "Ciclo operativo interno",
+      support: "Clientes, avance y bloqueos del mes — visibles para dirección y analistas.",
+      ctaPrimary: "Entrar al ciclo",
+      ctaSecondary: "Ver supervisión",
     },
   },
   {
@@ -74,11 +104,12 @@ export const projects: Project[] = [
       en: "Modern web presence for the OnTrack brand within the SSC group.",
       es: "Presencia web moderna para la marca OnTrack.",
     },
-    url: "https://www.ontrackcr.net/es",
+    url: "https://www.ontrackcr.net",
     year: "2025",
-    poster: "/projects/ontrack.png",
-    reel: "/projects/ontrack-hero.mp4",
-    videos: ["https://www.ontrackcr.net/media/hero-reel-01.mp4"],
+    poster: "/projects/ontrack.png?v=site1",
+    mobilePoster: "/projects/ontrack-mobile.png?v=site1",
+    reel: "/projects/ontrack-hero.mp4?v=site1",
+    videos: [],
     logo: "https://www.ontrackcr.net/logo-ontrack.png",
     heroChrome: {
       theme: "ontrack",
@@ -93,6 +124,26 @@ export const projects: Project[] = [
 ];
 
 export const experiences: Experience[] = [
+  {
+    role: {
+      en: "UI/UX & Frontend Contributor",
+      es: "Colaborador UI/UX y Frontend",
+    },
+    org: { en: "Banco Azul", es: "Banco Azul" },
+    period: "Aug – Sep 2026",
+    location: {
+      en: "Internship · El Salvador",
+      es: "Prácticas · El Salvador",
+    },
+    bullets: {
+      en: [
+        "Designed and built a new public homepage in Next.js for production review and handoff.",
+      ],
+      es: [
+        "Diseñé y construí una nueva homepage pública en Next.js para revisión de producción y handoff.",
+      ],
+    },
+  },
   {
     role: {
       en: "Bachelor’s in International Business",
@@ -111,14 +162,14 @@ export const experiences: Experience[] = [
   },
   {
     role: {
-      en: "Founder & Coach — Brazilian Jiu-Jitsu Team",
-      es: "Fundador y entrenador — Equipo de BJJ",
+      en: "BJJ Club Manager",
+      es: "Responsable del club de BJJ",
     },
     org: { en: "Universidad Europea Madrid", es: "Universidad Europea Madrid" },
-    period: "2023 – Present",
+    period: "2023 – 2026",
     bullets: {
-      en: ["Founded a university BJJ team from zero; weekly training for 15–25 students."],
-      es: ["Fundé un equipo universitario de BJJ desde cero; entrenamientos semanales para 15–25 estudiantes."],
+      en: ["Managed the university Brazilian Jiu-Jitsu club and weekly training sessions."],
+      es: ["Gestioné el club universitario de Brazilian Jiu-Jitsu y los entrenamientos semanales."],
     },
   },
   {
@@ -127,10 +178,10 @@ export const experiences: Experience[] = [
       es: "Miembro — Comité de artes marciales",
     },
     org: { en: "Universidad Europea Madrid", es: "Universidad Europea Madrid" },
-    period: "2023 – Present",
+    period: "2023 – 2026",
     bullets: {
-      en: ["Support martial arts programs, workshops, and student events."],
-      es: ["Apoyo programas de artes marciales, talleres y eventos estudiantiles."],
+      en: ["Supported martial arts programs, workshops, and student events."],
+      es: ["Apoyo a programas, talleres y eventos estudiantiles de artes marciales."],
     },
   },
 ];
@@ -237,8 +288,8 @@ export const content: SiteContent = {
     },
   },
   experience: {
-    en: { title: "Path", subtitle: "Study and leadership." },
-    es: { title: "Trayectoria", subtitle: "Estudio y liderazgo." },
+    en: { title: "Path", subtitle: "Study, internship, and leadership." },
+    es: { title: "Trayectoria", subtitle: "Estudio, prácticas y liderazgo." },
   },
   skills: {
     en: {
@@ -258,6 +309,11 @@ export const content: SiteContent = {
           label: "A skill I developed",
           items: [
             "End-to-end website delivery",
+            "UI/UX & Frontend Contributor · Banco Azul · Aug–Sep 2026",
+            "Business Intelligence and Deep Research with AI · Platzi · Sep 2026",
+            "Fundamentals of Interface Design (UX/UI) · Platzi · Sep 2026",
+            "AI-Assisted Coding and Development with Cursor · Aug 2026",
+            "Basic Programming · Platzi · Aug 2026",
             "Bilingual UX (ES / EN)",
             "Brand presentation",
             "Landing-page structure",
@@ -283,6 +339,11 @@ export const content: SiteContent = {
           label: "Una habilidad que desarrollé",
           items: [
             "Entrega web de extremo a extremo",
+            "Colaborador UI/UX y Frontend · Banco Azul · Ago–Sep 2026",
+            "Business Intelligence y Deep Research con IA · Platzi · Sep 2026",
+            "Fundamentos de diseño de interfaces UX/UI · Platzi · Sep 2026",
+            "AI-Assisted Coding and Development with Cursor · Aug 2026",
+            "Programación básica · Platzi · Aug 2026",
             "UX bilingüe (ES / EN)",
             "Presentación de marca",
             "Estructura de landing",
@@ -301,6 +362,8 @@ export const content: SiteContent = {
       cvEs: "Español",
       email: "danny.tacuna@gmail.com",
       phone: "+34 695 422 788",
+      linkedin: linkedInUrl,
+      linkedinLabel: "LinkedIn",
       location: "Villaviciosa de Odón, Madrid",
     },
     es: {
@@ -311,6 +374,8 @@ export const content: SiteContent = {
       cvEs: "Español",
       email: "danny.tacuna@gmail.com",
       phone: "+34 695 422 788",
+      linkedin: linkedInUrl,
+      linkedinLabel: "LinkedIn",
       location: "Villaviciosa de Odón, Madrid",
     },
   },

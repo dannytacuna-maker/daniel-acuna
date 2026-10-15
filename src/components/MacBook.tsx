@@ -27,7 +27,7 @@ export function MacBook({
   title,
 }: {
   angle?: Angle;
-  href: string;
+  href?: string;
   caption: string;
   reel: string;
   poster: string;
@@ -77,7 +77,7 @@ export function MacBook({
     frame.current = requestAnimationFrame(loop);
   }
 
-  function onPointerMove(event: PointerEvent<HTMLAnchorElement>) {
+  function onPointerMove(event: PointerEvent<HTMLElement>) {
     if (reduce.current) return;
     if (window.matchMedia("(pointer: coarse)").matches) return;
     const box = event.currentTarget.getBoundingClientRect();
@@ -95,15 +95,8 @@ export function MacBook({
     startLoop();
   }
 
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`mb-link mb-${angle}`}
-      onPointerMove={onPointerMove}
-      onPointerLeave={onPointerLeave}
-    >
+  const body = (
+    <>
       <span className="mb-shadow" aria-hidden="true" />
       <div ref={chassis} className="mb">
         <div className="mb-lid">
@@ -138,6 +131,31 @@ export function MacBook({
         </div>
       </div>
       <span className="mb-caption">{caption}</span>
+    </>
+  );
+
+  if (!href) {
+    return (
+      <div
+        className={`mb-link mb-${angle} mb-static`}
+        onPointerMove={onPointerMove}
+        onPointerLeave={onPointerLeave}
+      >
+        {body}
+      </div>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`mb-link mb-${angle}`}
+      onPointerMove={onPointerMove}
+      onPointerLeave={onPointerLeave}
+    >
+      {body}
     </a>
   );
 }

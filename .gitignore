@@ -41,3 +41,9 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# Reel recording temps
+scripts/.reel-tmp/
+scripts/tmp-frames/
+public/projects/*-frame-check.jpg
+public/projects/*-src-frame.jpg
