@@ -15,6 +15,18 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/demo/pintores-gardel",
+        destination: "/demo/pintores-gardel/index.html",
+      },
+      {
+        source: "/demo/pintores-gardel/",
+        destination: "/demo/pintores-gardel/index.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

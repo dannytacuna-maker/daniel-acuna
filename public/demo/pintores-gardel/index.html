@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Pintores Gardel · Pintores en San Sebastián de los Reyes</title>
+  <meta name="description" content="Pintores Gardel. Pintura de interiores y exteriores en San Sebastián de los Reyes (Madrid). Valoración 5,0 en Google con 206 reseñas. Pida presupuesto por WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --bg-deep: #efe6d6;
+      --paper: #fffaf3;
+      --ink: #1c1915;
+      --muted: #5e574c;
+      --line: #e4d9c6;
+      --accent: #b44a2a;
+      --accent-dark: #8d351c;
+      --accent-soft: #f3ddd4;
+      --sage: #3d5a4a;
+      --sage-soft: #e4eee8;
+      --star: #c99212;
+      --whatsapp: #128c4a;
+      --whatsapp-dark: #0e733c;
+      --shadow: 0 18px 40px rgba(28, 25, 21, 0.08);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Outfit", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, input, textarea, select { font: inherit; }
+
+    .ribbon {
+      background: var(--ink);
+      color: #efe6d6;
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      font-weight: 500;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(246, 241, 232, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+    }
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fffaf3;
+      display: grid;
+      place-items: center;
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      flex-shrink: 0;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .brand-name {
+      display: block;
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: 1.12rem;
+      line-height: 1.1;
+    }
+    .brand-sub {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: none;
+      gap: 1.6rem;
+      list-style: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+    .nav-phone svg { width: 16px; height: 16px; }
+
+    .hero {
+      padding: 2.4rem 0 3.2rem;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: var(--accent);
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.4rem, 7vw, 4.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .lede {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 34ch;
+      margin-bottom: 1.6rem;
+    }
+    .ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.6rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      border-radius: 999px;
+      padding: 0.85rem 1.25rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-wa {
+      background: var(--whatsapp);
+      color: #fff;
+    }
+    .btn-wa:hover { background: var(--whatsapp-dark); }
+    .btn-call {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .btn-call:hover { background: #000; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+    .btn-ghost:hover { background: var(--ink); color: var(--bg); }
+    .btn-accent {
+      background: var(--accent);
+      color: #fffaf3;
+      border: 0;
+      width: 100%;
+      cursor: pointer;
+    }
+    .btn-accent:hover { background: var(--accent-dark); }
+
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem 0.45rem 0.5rem;
+      box-shadow: var(--shadow);
+    }
+    .gmark {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      flex-shrink: 0;
+    }
+    .stars { color: var(--star); letter-spacing: 0.05em; font-size: 0.9rem; }
+    .rating-pill strong { font-size: 0.95rem; }
+    .rating-pill span { color: var(--muted); font-size: 0.85rem; }
+
+    .hero-card {
+      background:
+        linear-gradient(165deg, rgba(28, 25, 21, 0.15), rgba(28, 25, 21, 0.55)),
+        url("https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      min-height: 280px;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .hero-card-caption {
+      position: absolute;
+      left: 1.1rem;
+      bottom: 1.1rem;
+      background: rgba(246, 241, 232, 0.94);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
+      max-width: 16rem;
+    }
+    .hero-card-caption p {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .hero-card-caption strong {
+      display: block;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .section {
+      padding: 3.2rem 0;
+    }
+    .section-head {
+      margin-bottom: 1.8rem;
+      max-width: 38rem;
+    }
+    .section h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.55rem;
+    }
+    .section-head p { color: var(--muted); font-size: 1.05rem; }
+
+    .services {
+      background: var(--bg-deep);
+    }
+    .grid-services {
+      display: grid;
+      gap: 1rem;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem;
+    }
+    .icon-wrap {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      display: grid;
+      place-items: center;
+      margin-bottom: 0.9rem;
+    }
+    .icon-wrap svg { width: 22px; height: 22px; }
+    .card h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    .reviews {
+      background: var(--ink);
+      color: #f6f1e8;
+    }
+    .reviews .section-head p { color: #cfc6b6; }
+    .reviews-panel {
+      display: grid;
+      gap: 1.4rem;
+      background: #26221d;
+      border-radius: 24px;
+      padding: 1.6rem 1.4rem;
+      border: 1px solid #3a342c;
+    }
+    .score {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .score-num {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(4rem, 12vw, 6rem);
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+    }
+    .score .stars { font-size: 1.15rem; }
+    .score-label { color: #cfc6b6; }
+    .reviews-note {
+      color: #cfc6b6;
+      font-size: 0.95rem;
+      max-width: 36ch;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.4rem;
+    }
+    .chip {
+      border: 1px solid #4a4339;
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      color: #efe6d6;
+    }
+
+    .area-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .area-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.3rem;
+    }
+    .area-card h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .area-card p, .hours li { color: var(--muted); }
+    .hours {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+      margin-top: 0.9rem;
+    }
+    .hours li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px dashed var(--line);
+      padding-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+    .hours li:last-child { border-bottom: 0; }
+    .pin {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--sage-soft);
+      color: var(--sage);
+      display: grid;
+      place-items: center;
+      margin-bottom: 0.9rem;
+    }
+    .pin svg { width: 22px; height: 22px; }
+
+    .contact {
+      background: var(--bg-deep);
+    }
+    .contact-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+    form.card { display: grid; gap: 0.85rem; }
+    label {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 12px;
+      padding: 0.8rem 0.9rem;
+      color: var(--ink);
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .form-note { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+    .aside-cta {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.3rem;
+      display: grid;
+      align-content: start;
+      gap: 0.85rem;
+    }
+    .aside-cta h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.4rem;
+    }
+    .aside-cta p { color: var(--muted); }
+    .aside-cta .btn { width: 100%; }
+
+    footer {
+      background: var(--ink);
+      color: #efe6d6;
+      padding: 2rem 0 1.4rem;
+    }
+    .foot {
+      display: grid;
+      gap: 1.4rem;
+    }
+    .foot a { color: #efe6d6; }
+    .foot p, .legal { color: #b7aea0; font-size: 0.88rem; }
+    .legal { margin-top: 1.4rem; padding-top: 1.1rem; border-top: 1px solid #3a342c; }
+
+    h1, h2 { text-wrap: balance; }
+
+    @media (max-width: 719px) {
+      .brand-sub { display: none; }
+      .nav-phone { font-size: 0.86rem; }
+    }
+
+    @media (min-width: 720px) {
+      .nav-links { display: flex; }
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+      .hero { padding: 3.4rem 0 4.2rem; }
+      .hero-card { min-height: 420px; }
+      .grid-services { grid-template-columns: repeat(2, 1fr); }
+      .reviews-panel { grid-template-columns: auto 1fr; align-items: center; padding: 2rem 2.2rem; gap: 2.4rem; }
+      .area-grid, .contact-grid, .foot { grid-template-columns: 1fr 1fr; }
+      .section { padding: 4.2rem 0; }
+    }
+    @media (min-width: 980px) {
+      .grid-services { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ribbon">Borrador gratuito preparado por Daniel Acuña</div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#inicio">
+        <span class="mark">PG</span>
+        <span class="brand-text">
+          <span class="brand-name">Pintores Gardel</span>
+          <span class="brand-sub">San Sebastián de los Reyes</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#zona">Zona</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+34630894874">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        630 89 48 74
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Pintores en San Sebastián de los Reyes</p>
+          <h1>Pintura de interiores y exteriores, cerca de casa.</h1>
+          <p class="lede">Pintores Gardel en San Sebastián de los Reyes (Madrid). Pida presupuesto por WhatsApp o por teléfono.</p>
+          <div class="ctas">
+            <a class="btn btn-wa" href="https://wa.me/34630894874" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.33.16 11.9a11.8 11.8 0 0 0 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.75 1.47h.01c6.56 0 11.9-5.34 11.9-11.91a11.82 11.82 0 0 0-3.44-8.43zM12.06 21.15h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 6.98 2.9 9.84 9.84 0 0 1 2.9 6.99c0 5.45-4.44 9.87-9.89 9.87zm5.42-7.4c-.3-.15-1.76-.87-2.03-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16-.35.22-.64.07a8.1 8.1 0 0 1-2.38-1.47 8.94 8.94 0 0 1-1.65-2.05c-.17-.3 0-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.56-.35z"/>
+              </svg>
+              WhatsApp
+            </a>
+            <a class="btn btn-call" href="tel:+34630894874">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              Llamar
+            </a>
+          </div>
+          <div class="rating-pill">
+            <span class="gmark" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.56c2.08-1.92 3.28-4.74 3.28-8.1z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.77c-.99.66-2.26 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09A6.97 6.97 0 0 1 5.5 12c0-.72.13-1.42.34-2.09V7.07H2.18A11.99 11.99 0 0 0 0 12c0 1.94.46 3.77 1.18 5.39l3.66-2.3z"/>
+                <path fill="#EA4335" d="M12 4.75c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.09 14.97 0 12 0 7.7 0 3.99 2.47 2.18 6.07l3.66 2.84c.87-2.6 3.3-4.16 6.16-4.16z"/>
+              </svg>
+            </span>
+            <div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <strong>5,0</strong> <span>en Google · 206 reseñas</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card" role="img" aria-label="Pintor aplicando pintura en una pared">
+          <div class="hero-card-caption">
+            <strong>28702 San Sebastián de los Reyes</strong>
+            <p>Lunes a viernes, de 9:00 a 19:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Servicios de pintura</h2>
+          <p>Trabajos habituales de un pintor profesional para viviendas y espacios en la zona.</p>
+        </div>
+        <div class="grid-services">
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <h3>Pintura de interiores</h3>
+            <p>Pintura de habitaciones, salones, techos y zonas comunes, con preparación previa de las superficies.</p>
+          </article>
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/>
+              </svg>
+            </div>
+            <h3>Exteriores y fachadas</h3>
+            <p>Pintura de fachadas, terrazas y exteriores para proteger y renovar el aspecto del edificio o la vivienda.</p>
+          </article>
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3>Preparación de superficies</h3>
+            <p>Lijado, masillado y reparación de pequeñas imperfecciones antes de pintar, para un acabado más uniforme.</p>
+          </article>
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 19V5"/><path d="M5 12h14"/><circle cx="12" cy="12" r="9"/>
+              </svg>
+            </div>
+            <h3>Presupuesto sin compromiso</h3>
+            <p>Cuéntenos el trabajo por WhatsApp o por teléfono y le preparamos un presupuesto claro, sin compromiso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="opiniones">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Lo que dicen en Google</h2>
+          <p>Datos tomados de su ficha pública de Google Maps.</p>
+        </div>
+        <div class="reviews-panel">
+          <div class="score">
+            <div class="score-num">5,0</div>
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <p class="score-label">Valoración media en Google</p>
+          </div>
+          <div>
+            <p class="reviews-note">Pintores Gardel tiene una valoración de <strong style="color:#fffaf3">5,0 sobre 5</strong> con <strong style="color:#fffaf3">206 reseñas</strong> en Google.</p>
+            <div class="badge-row">
+              <span class="chip">206 reseñas</span>
+              <span class="chip">Categoría: pintor</span>
+              <span class="chip">San Sebastián de los Reyes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zona">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Zona de servicio</h2>
+          <p>Basados en San Sebastián de los Reyes, en el norte de Madrid.</p>
+        </div>
+        <div class="area-grid">
+          <article class="area-card">
+            <div class="pin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/>
+              </svg>
+            </div>
+            <h3>San Sebastián de los Reyes</h3>
+            <p>Su local figura en el código postal <strong>28702 San Sebastián de los Reyes, Madrid</strong>, según su ficha de Google Maps.</p>
+          </article>
+          <article class="area-card">
+            <div class="pin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+            <h3>Horario</h3>
+            <p>Horario publicado en Google Maps. Si va a acercarse, confírmelo por teléfono.</p>
+            <ul class="hours">
+              <li><span>Lunes a viernes</span><span>09:00–19:00</span></li>
+              <li><span>Sábado</span><span>Cerrado</span></li>
+              <li><span>Domingo</span><span>Cerrado</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Pedir presupuesto</h2>
+          <p>Escríbanos o llámenos. Estaremos encantados de atenderle.</p>
+        </div>
+        <div class="contact-grid">
+          <form class="card" action="#" method="get" onsubmit="return false;">
+            <label>
+              Nombre
+              <input type="text" name="nombre" placeholder="Su nombre" autocomplete="name" />
+            </label>
+            <label>
+              Teléfono
+              <input type="tel" name="telefono" placeholder="Su teléfono" autocomplete="tel" />
+            </label>
+            <label>
+              Descripción del trabajo
+              <textarea name="mensaje" placeholder="Cuéntenos qué necesita pintar y en qué zona."></textarea>
+            </label>
+            <button class="btn btn-accent" type="button">Enviar solicitud</button>
+            <p class="form-note">Formulario de demostración: en este borrador no se envía ningún dato.</p>
+          </form>
+          <aside class="aside-cta">
+            <h3>¿Prefiere hablar ahora?</h3>
+            <p>El camino más rápido es un WhatsApp o una llamada al <strong>630 89 48 74</strong>.</p>
+            <a class="btn btn-wa" href="https://wa.me/34630894874" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.33.16 11.9a11.8 11.8 0 0 0 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.75 1.47h.01c6.56 0 11.9-5.34 11.9-11.91a11.82 11.82 0 0 0-3.44-8.43zM12.06 21.15h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 6.98 2.9 9.84 9.84 0 0 1 2.9 6.99c0 5.45-4.44 9.87-9.89 9.87zm5.42-7.4c-.3-.15-1.76-.87-2.03-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16-.35.22-.64.07a8.1 8.1 0 0 1-2.38-1.47 8.94 8.94 0 0 1-1.65-2.05c-.17-.3 0-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.56-.35z"/>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="tel:+34630894874">Llamar al 630 89 48 74</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <p class="brand-name" style="color:#f6f1e8;font-size:1.2rem;">Pintores Gardel</p>
+        <p>Pintores en 28702 San Sebastián de los Reyes, Madrid.</p>
+        <p><a href="tel:+34630894874">630 89 48 74</a></p>
+      </div>
+      <div>
+        <p>También en <a href="https://www.facebook.com/pintoresgardel" target="_blank" rel="noopener">Facebook</a>.</p>
+        <p>Lunes a viernes, 09:00–19:00.</p>
+      </div>
+    </div>
+    <div class="wrap legal">
+      Borrador gratuito preparado por Daniel Acuña. Página de muestra; no es el sitio oficial de Pintores Gardel.
+    </div>
+  </footer>
+</body>
+</html>
